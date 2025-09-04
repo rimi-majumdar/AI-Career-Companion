@@ -8,6 +8,8 @@ import { ResumeUpload } from "./ResumeUpload";
 import { ProfileEntry } from "./ProfileEntry";
 import { CareerSuggestions } from "./CareerSuggestions";
 import { JobMatching } from "./JobMatching";
+import { ATSScoreScanner } from "./ATSScoreScanner";
+import { FieldInterestSelector } from "./FieldInterestSelector";
 import { 
   User, 
   BrainCircuit, 
@@ -203,7 +205,7 @@ export const Dashboard = () => {
 
             {/* Main Content Tabs */}
             <Tabs value={activeTab} onValueChange={setActiveTab}>
-              <TabsList className="grid w-full grid-cols-3">
+              <TabsList className="grid w-full grid-cols-5">
                 <TabsTrigger value="suggestions" className="flex items-center gap-2">
                   <Target className="h-4 w-4" />
                   Career Paths
@@ -211,6 +213,14 @@ export const Dashboard = () => {
                 <TabsTrigger value="jobs" className="flex items-center gap-2">
                   <Briefcase className="h-4 w-4" />
                   Job Matches
+                </TabsTrigger>
+                <TabsTrigger value="ats" className="flex items-center gap-2">
+                  <Award className="h-4 w-4" />
+                  ATS Scanner
+                </TabsTrigger>
+                <TabsTrigger value="field" className="flex items-center gap-2">
+                  <TrendingUp className="h-4 w-4" />
+                  Field Analysis
                 </TabsTrigger>
                 <TabsTrigger value="learn" className="flex items-center gap-2">
                   <BookOpen className="h-4 w-4" />
@@ -227,6 +237,14 @@ export const Dashboard = () => {
               
               <TabsContent value="jobs" className="mt-6">
                 <JobMatching userSkills={allSkills} />
+              </TabsContent>
+              
+              <TabsContent value="ats" className="mt-6">
+                <ATSScoreScanner />
+              </TabsContent>
+              
+              <TabsContent value="field" className="mt-6">
+                <FieldInterestSelector userSkills={allSkills} />
               </TabsContent>
               
               <TabsContent value="learn" className="mt-6">

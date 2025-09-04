@@ -33,13 +33,13 @@ export const JobMatching = ({ userSkills }: JobMatchingProps) => {
     {
       id: "1",
       title: "Senior React Developer",
-      company: "TechCorp Inc",
-      location: "San Francisco, CA",
-      salary: "$120k - $150k",
+      company: "Infosys",
+      location: "Bangalore, India",
+      salary: "₹15L - ₹25L",
       type: "Full-time",
       postedDate: "2 days ago",
       matchScore: 92,
-      description: "We're looking for a senior React developer to join our growing team...",
+      description: "We're looking for a senior React developer to join our growing team in Bangalore...",
       requiredSkills: ["React", "TypeScript", "Node.js", "GraphQL", "AWS"],
       matchingSkills: ["React", "TypeScript", "Node.js"],
       missingSkills: ["GraphQL", "AWS"]
@@ -47,13 +47,13 @@ export const JobMatching = ({ userSkills }: JobMatchingProps) => {
     {
       id: "2", 
       title: "Full Stack Engineer",
-      company: "StartupXYZ",
-      location: "New York, NY",
-      salary: "$90k - $120k",
+      company: "Wipro",
+      location: "Hyderabad, India",
+      salary: "₹12L - ₹18L",
       type: "Full-time",
       postedDate: "1 week ago",
       matchScore: 85,
-      description: "Join our fast-growing startup as a full stack engineer...",
+      description: "Join our fast-growing tech division as a full stack engineer in Hyderabad...",
       requiredSkills: ["React", "Python", "PostgreSQL", "Docker", "Kubernetes"],
       matchingSkills: ["React", "Python"],
       missingSkills: ["PostgreSQL", "Docker", "Kubernetes"]
@@ -61,13 +61,13 @@ export const JobMatching = ({ userSkills }: JobMatchingProps) => {
     {
       id: "3",
       title: "ML Engineer",
-      company: "AI Innovations",
-      location: "Remote",
-      salary: "$130k - $170k", 
+      company: "TCS",
+      location: "Mumbai, India",
+      salary: "₹18L - ₹28L", 
       type: "Full-time",
       postedDate: "3 days ago",
       matchScore: 78,
-      description: "Build and deploy machine learning models at scale...",
+      description: "Build and deploy machine learning models at scale in our Mumbai office...",
       requiredSkills: ["Python", "Machine Learning", "TensorFlow", "Kubernetes", "MLOps"],
       matchingSkills: ["Python", "Machine Learning"],
       missingSkills: ["TensorFlow", "Kubernetes", "MLOps"]
@@ -75,16 +75,44 @@ export const JobMatching = ({ userSkills }: JobMatchingProps) => {
     {
       id: "4",
       title: "Frontend Developer",
-      company: "DesignStudio",
-      location: "Austin, TX",
-      salary: "$70k - $95k",
-      type: "Contract",
+      company: "Flipkart",
+      location: "Delhi, India",
+      salary: "₹10L - ₹16L",
+      type: "Full-time",
       postedDate: "5 days ago", 
       matchScore: 88,
-      description: "Create beautiful user interfaces using modern frontend technologies...",
+      description: "Create beautiful user interfaces for India's largest e-commerce platform...",
       requiredSkills: ["React", "TypeScript", "CSS", "Figma", "Next.js"],
       matchingSkills: ["React", "TypeScript"],
       missingSkills: ["Figma", "Next.js"]
+    },
+    {
+      id: "5",
+      title: "DevOps Engineer",
+      company: "Paytm",
+      location: "Noida, India",
+      salary: "₹14L - ₹22L",
+      type: "Full-time",
+      postedDate: "4 days ago",
+      matchScore: 75,
+      description: "Join our DevOps team to scale India's leading fintech platform...",
+      requiredSkills: ["AWS", "Docker", "Kubernetes", "Jenkins", "Python"],
+      matchingSkills: ["Python"],
+      missingSkills: ["AWS", "Docker", "Kubernetes", "Jenkins"]
+    },
+    {
+      id: "6",
+      title: "Backend Developer",
+      company: "Zomato",
+      location: "Gurgaon, India",
+      salary: "₹16L - ₹24L",
+      type: "Full-time",
+      postedDate: "1 day ago",
+      matchScore: 82,
+      description: "Build scalable backend systems for millions of food lovers across India...",
+      requiredSkills: ["Node.js", "Python", "MongoDB", "Redis", "Microservices"],
+      matchingSkills: ["Node.js", "Python"],
+      missingSkills: ["MongoDB", "Redis", "Microservices"]
     }
   ];
 
@@ -202,7 +230,11 @@ export const JobMatching = ({ userSkills }: JobMatchingProps) => {
                 </p>
 
                 <div className="flex gap-2 pt-2">
-                  <Button variant="gradient" className="flex-1">
+                  <Button 
+                    variant="gradient" 
+                    className="flex-1"
+                    onClick={() => window.open(`https://careers.${job.company.toLowerCase().replace(/\s+/g, '')}.com`, '_blank')}
+                  >
                     Apply Now
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
