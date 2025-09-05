@@ -3,8 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Target, BookOpen, Play, ExternalLink, TrendingUp, Clock } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Target, BookOpen, Play, ExternalLink, TrendingUp, Clock, Search } from "lucide-react";
 
 interface FieldData {
   name: string;
@@ -148,9 +148,73 @@ export const FieldInterestSelector = ({ userSkills }: FieldInterestSelectorProps
   const [selectedField, setSelectedField] = useState<string>("");
   const [fieldData, setFieldData] = useState<FieldData | null>(null);
 
+  const generateDynamicFieldData = (fieldName: string): FieldData => {
+    const commonSkills = {
+      "ai": ["Python", "Machine Learning", "TensorFlow", "PyTorch", "Statistics", "Data Analysis"],
+      "mobile": ["React Native", "Flutter", "Swift", "Kotlin", "Mobile UI/UX", "API Integration"],
+      "devops": ["Docker", "Kubernetes", "AWS", "CI/CD", "Linux", "Terraform"],
+      "cybersecurity": ["Network Security", "Penetration Testing", "CISSP", "Ethical Hacking", "Firewall", "Encryption"],
+      "blockchain": ["Solidity", "Web3", "Smart Contracts", "Ethereum", "Cryptocurrency", "DeFi"],
+      "game": ["Unity", "C#", "Game Design", "3D Modeling", "Physics", "User Experience"],
+      "ui": ["Figma", "Adobe XD", "Prototyping", "User Research", "Design Systems", "Accessibility"]
+    };
+
+    const fieldKey = Object.keys(commonSkills).find(key => 
+      fieldName.toLowerCase().includes(key)
+    );
+
+    const skills = fieldKey ? commonSkills[fieldKey as keyof typeof commonSkills] : 
+      ["Programming", "Problem Solving", "Communication", "Project Management", "Technical Skills", "Domain Knowledge"];
+
+    return {
+      name: fieldName,
+      description: `Build expertise in ${fieldName} with industry-relevant skills and knowledge`,
+      requiredSkills: skills,
+      averageSalary: "₹6L - ₹30L",
+      growthRate: "12-25%",
+      roadmap: [
+        {
+          phase: "Foundation",
+          duration: "2-3 months",
+          skills: skills.slice(0, 3),
+          resources: [
+            { title: `${fieldName} Fundamentals`, type: "video", url: "https://youtube.com/results?search_query=" + encodeURIComponent(fieldName + " tutorial") },
+            { title: `Learn ${fieldName}`, type: "course", url: "https://coursera.org/courses?query=" + encodeURIComponent(fieldName) },
+            { title: `${fieldName} Documentation`, type: "article", url: "https://google.com/search?q=" + encodeURIComponent(fieldName + " documentation") }
+          ]
+        },
+        {
+          phase: "Intermediate",
+          duration: "3-4 months",
+          skills: skills.slice(3, 5),
+          resources: [
+            { title: `Advanced ${fieldName}`, type: "video", url: "https://youtube.com/results?search_query=" + encodeURIComponent("advanced " + fieldName) },
+            { title: `${fieldName} Projects`, type: "course", url: "https://udemy.com/courses/search/?q=" + encodeURIComponent(fieldName) },
+            { title: `${fieldName} Best Practices`, type: "article", url: "https://google.com/search?q=" + encodeURIComponent(fieldName + " best practices") }
+          ]
+        },
+        {
+          phase: "Advanced",
+          duration: "3-4 months",
+          skills: skills.slice(5),
+          resources: [
+            { title: `${fieldName} Mastery`, type: "video", url: "https://youtube.com/results?search_query=" + encodeURIComponent(fieldName + " mastery") },
+            { title: `${fieldName} Certification`, type: "course", url: "https://coursera.org/professional-certificates" },
+            { title: `${fieldName} Industry Trends`, type: "article", url: "https://google.com/search?q=" + encodeURIComponent(fieldName + " trends 2024") }
+          ]
+        }
+      ]
+    };
+  };
+
   const handleFieldSelect = (field: string) => {
     setSelectedField(field);
-    setFieldData(fieldsData[field]);
+    if (field.trim()) {
+      const predefinedField = fieldsData[field.toLowerCase()];
+      setFieldData(predefinedField || generateDynamicFieldData(field));
+    } else {
+      setFieldData(null);
+    }
   };
 
   const calculateSkillGap = (requiredSkills: string[]) => {
@@ -179,16 +243,28 @@ export const FieldInterestSelector = ({ userSkills }: FieldInterestSelectorProps
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <Select value={selectedField} onValueChange={handleFieldSelect}>
-            <SelectTrigger className="w-full">
-              <SelectValue placeholder="Select your field of interest" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="frontend">Frontend Development</SelectItem>
-              <SelectItem value="backend">Backend Development</SelectItem>
-              <SelectItem value="data-science">Data Science</SelectItem>
-            </SelectContent>
-          </Select>
+          <div className="relative">
+            <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+            <Input
+              placeholder="Enter your field of interest (e.g., AI, Mobile Development, Cybersecurity...)"
+              value={selectedField}
+              onChange={(e) => handleFieldSelect(e.target.value)}
+              className="pl-10"
+            />
+          </div>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {["Frontend Development", "Backend Development", "Data Science", "AI/ML", "Mobile Development", "DevOps", "Cybersecurity"].map((field) => (
+              <Button
+                key={field}
+                variant="outline"
+                size="sm"
+                onClick={() => handleFieldSelect(field)}
+                className="text-xs"
+              >
+                {field}
+              </Button>
+            ))}
+          </div>
         </CardContent>
       </Card>
 

@@ -10,6 +10,7 @@ import { CareerSuggestions } from "./CareerSuggestions";
 import { JobMatching } from "./JobMatching";
 import { ATSScoreScanner } from "./ATSScoreScanner";
 import { FieldInterestSelector } from "./FieldInterestSelector";
+import { ResumeTemplates } from "./ResumeTemplates";
 import { 
   User, 
   BrainCircuit, 
@@ -205,7 +206,7 @@ export const Dashboard = () => {
 
             {/* Main Content Tabs */}
             <Tabs value={activeTab} onValueChange={setActiveTab}>
-              <TabsList className="grid w-full grid-cols-5">
+              <TabsList className="grid w-full grid-cols-6">
                 <TabsTrigger value="suggestions" className="flex items-center gap-2">
                   <Target className="h-4 w-4" />
                   Career Paths
@@ -222,8 +223,12 @@ export const Dashboard = () => {
                   <TrendingUp className="h-4 w-4" />
                   Field Analysis
                 </TabsTrigger>
-                <TabsTrigger value="learn" className="flex items-center gap-2">
+                <TabsTrigger value="templates" className="flex items-center gap-2">
                   <BookOpen className="h-4 w-4" />
+                  Resume Builder
+                </TabsTrigger>
+                <TabsTrigger value="learn" className="flex items-center gap-2">
+                  <Star className="h-4 w-4" />
                   Skill Development
                 </TabsTrigger>
               </TabsList>
@@ -245,6 +250,10 @@ export const Dashboard = () => {
               
               <TabsContent value="field" className="mt-6">
                 <FieldInterestSelector userSkills={allSkills} />
+              </TabsContent>
+              
+              <TabsContent value="templates" className="mt-6">
+                <ResumeTemplates />
               </TabsContent>
               
               <TabsContent value="learn" className="mt-6">
