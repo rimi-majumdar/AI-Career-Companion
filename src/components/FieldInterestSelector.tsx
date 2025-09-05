@@ -33,9 +33,9 @@ const fieldsData: Record<string, FieldData> = {
         duration: "2-3 months",
         skills: ["HTML", "CSS", "JavaScript Basics"],
         resources: [
-          { title: "HTML & CSS Full Course", type: "video", url: "https://youtube.com/watch?v=mU6anWqZJcc" },
-          { title: "JavaScript Fundamentals", type: "video", url: "https://youtube.com/watch?v=W6NZfCO5SIk" },
-          { title: "MDN Web Docs", type: "article", url: "https://developer.mozilla.org" }
+          { title: "HTML & CSS Full Course", type: "video", url: "https://www.youtube.com/watch?v=G3e-cpL7ofc" },
+          { title: "JavaScript Fundamentals", type: "video", url: "https://www.youtube.com/watch?v=PkZNo7MFNFg" },
+          { title: "MDN Web Docs", type: "article", url: "https://developer.mozilla.org/en-US/" }
         ]
       },
       {
@@ -43,9 +43,9 @@ const fieldsData: Record<string, FieldData> = {
         duration: "3-4 months",
         skills: ["React", "TypeScript", "State Management"],
         resources: [
-          { title: "React Complete Guide", type: "video", url: "https://youtube.com/watch?v=bMknfKXIFA8" },
-          { title: "TypeScript for Beginners", type: "video", url: "https://youtube.com/watch?v=BwuLxPH8IDs" },
-          { title: "React Official Docs", type: "article", url: "https://react.dev" }
+          { title: "React Complete Guide", type: "video", url: "https://www.youtube.com/watch?v=SqcY0GlETPk" },
+          { title: "TypeScript for Beginners", type: "video", url: "https://www.youtube.com/watch?v=d56mG7DezGs" },
+          { title: "React Official Docs", type: "article", url: "https://react.dev/" }
         ]
       },
       {
@@ -53,8 +53,8 @@ const fieldsData: Record<string, FieldData> = {
         duration: "2-3 months",
         skills: ["Performance Optimization", "Testing", "Build Tools"],
         resources: [
-          { title: "React Performance", type: "video", url: "https://youtube.com/watch?v=00lxm_doFYw" },
-          { title: "Testing React Apps", type: "video", url: "https://youtube.com/watch?v=8Xwq35cPwYg" },
+          { title: "React Performance", type: "video", url: "https://www.youtube.com/watch?v=KJP1E-Y-xyo" },
+          { title: "Testing React Apps", type: "video", url: "https://www.youtube.com/watch?v=7r4xVDI2vho" },
           { title: "Webpack & Vite Guide", type: "article", url: "https://vitejs.dev/guide/" }
         ]
       }
@@ -72,8 +72,8 @@ const fieldsData: Record<string, FieldData> = {
         duration: "2-3 months",
         skills: ["Node.js", "Express", "REST APIs"],
         resources: [
-          { title: "Node.js Complete Course", type: "video", url: "https://youtube.com/watch?v=TlB_eWDSMt4" },
-          { title: "Express.js Tutorial", type: "video", url: "https://youtube.com/watch?v=L72fhGm1tfE" },
+          { title: "Node.js Complete Course", type: "video", url: "https://www.youtube.com/watch?v=f2EqECiTBL8" },
+          { title: "Express.js Tutorial", type: "video", url: "https://www.youtube.com/watch?v=SccSCuHhOw0" },
           { title: "REST API Best Practices", type: "article", url: "https://restfulapi.net/" }
         ]
       },
@@ -82,9 +82,9 @@ const fieldsData: Record<string, FieldData> = {
         duration: "3-4 months",
         skills: ["Databases", "Authentication", "Security"],
         resources: [
-          { title: "MongoDB Tutorial", type: "video", url: "https://youtube.com/watch?v=ExcRbA7fy_A" },
-          { title: "JWT Authentication", type: "video", url: "https://youtube.com/watch?v=mbsmsi7l3r4" },
-          { title: "Node.js Security Guide", type: "article", url: "https://nodejs.org/en/docs/guides/security/" }
+          { title: "MongoDB Tutorial", type: "video", url: "https://www.youtube.com/watch?v=oSIv-E60NiU" },
+          { title: "JWT Authentication", type: "video", url: "https://www.youtube.com/watch?v=7Q17ubqLfaM" },
+          { title: "Node.js Security Guide", type: "article", url: "https://nodejs.org/en/guides/security/" }
         ]
       },
       {
@@ -92,8 +92,8 @@ const fieldsData: Record<string, FieldData> = {
         duration: "3-4 months",
         skills: ["Microservices", "DevOps", "Cloud Deployment"],
         resources: [
-          { title: "Microservices with Node.js", type: "video", url: "https://youtube.com/watch?v=CdBtNQZH8a4" },
-          { title: "Docker for Developers", type: "video", url: "https://youtube.com/watch?v=3c-iBn73dDE" },
+          { title: "Microservices with Node.js", type: "video", url: "https://www.youtube.com/watch?v=BnknNTN8icw" },
+          { title: "Docker for Developers", type: "video", url: "https://www.youtube.com/watch?v=pTFZFxd4hOI" },
           { title: "AWS Node.js Guide", type: "article", url: "https://aws.amazon.com/developer/language/javascript/" }
         ]
       }
@@ -111,9 +111,9 @@ const fieldsData: Record<string, FieldData> = {
         duration: "3-4 months",
         skills: ["Python", "Statistics", "Pandas", "NumPy"],
         resources: [
-          { title: "Python for Data Science", type: "video", url: "https://youtube.com/watch?v=LHBE6Q9XlzI" },
-          { title: "Statistics Fundamentals", type: "video", url: "https://youtube.com/watch?v=MdHtK7CWpCQ" },
-          { title: "Pandas Tutorial", type: "video", url: "https://youtube.com/watch?v=vmEHCJofslg" }
+          { title: "Python for Data Science", type: "video", url: "https://www.youtube.com/watch?v=ua-CiDNNj30" },
+          { title: "Statistics Fundamentals", type: "video", url: "https://www.youtube.com/watch?v=xxpc-HPKN28" },
+          { title: "Pandas Tutorial", type: "video", url: "https://www.youtube.com/watch?v=ZyhVh-qRZPA" }
         ]
       },
       {
@@ -121,9 +121,9 @@ const fieldsData: Record<string, FieldData> = {
         duration: "4-5 months",
         skills: ["Machine Learning", "Scikit-learn", "Data Visualization"],
         resources: [
-          { title: "Machine Learning Course", type: "video", url: "https://youtube.com/watch?v=NWONeJKn6kc" },
-          { title: "Scikit-learn Tutorial", type: "video", url: "https://youtube.com/watch?v=pqNCD_5r0IU" },
-          { title: "Data Visualization with Python", type: "video", url: "https://youtube.com/watch?v=a9UrKTVEeZA" }
+          { title: "Machine Learning Course", type: "video", url: "https://www.youtube.com/watch?v=i_LwzRVP7bg" },
+          { title: "Scikit-learn Tutorial", type: "video", url: "https://www.youtube.com/watch?v=0B5eIE_1vpU" },
+          { title: "Data Visualization with Python", type: "video", url: "https://www.youtube.com/watch?v=8Mq2HRML4Ck" }
         ]
       },
       {
@@ -131,8 +131,8 @@ const fieldsData: Record<string, FieldData> = {
         duration: "4-6 months",
         skills: ["Deep Learning", "TensorFlow", "MLOps"],
         resources: [
-          { title: "Deep Learning Specialization", type: "course", url: "https://coursera.org/specializations/deep-learning" },
-          { title: "TensorFlow Tutorial", type: "video", url: "https://youtube.com/watch?v=tPYj3fFJGjk" },
+          { title: "Deep Learning Specialization", type: "course", url: "https://www.coursera.org/specializations/deep-learning" },
+          { title: "TensorFlow Tutorial", type: "video", url: "https://www.youtube.com/watch?v=i8NETqtGHms" },
           { title: "MLOps Guide", type: "article", url: "https://ml-ops.org/" }
         ]
       }
@@ -178,9 +178,9 @@ export const FieldInterestSelector = ({ userSkills }: FieldInterestSelectorProps
           duration: "2-3 months",
           skills: skills.slice(0, 3),
           resources: [
-            { title: `${fieldName} Fundamentals`, type: "video", url: "https://youtube.com/results?search_query=" + encodeURIComponent(fieldName + " tutorial") },
-            { title: `Learn ${fieldName}`, type: "course", url: "https://coursera.org/courses?query=" + encodeURIComponent(fieldName) },
-            { title: `${fieldName} Documentation`, type: "article", url: "https://google.com/search?q=" + encodeURIComponent(fieldName + " documentation") }
+            { title: `${fieldName} Fundamentals`, type: "video", url: "https://www.youtube.com/results?search_query=" + encodeURIComponent(fieldName + " tutorial beginner") },
+            { title: `Learn ${fieldName}`, type: "course", url: "https://www.coursera.org/courses?query=" + encodeURIComponent(fieldName) },
+            { title: `${fieldName} Documentation`, type: "article", url: "https://www.google.com/search?q=" + encodeURIComponent(fieldName + " official documentation") }
           ]
         },
         {
@@ -188,9 +188,9 @@ export const FieldInterestSelector = ({ userSkills }: FieldInterestSelectorProps
           duration: "3-4 months",
           skills: skills.slice(3, 5),
           resources: [
-            { title: `Advanced ${fieldName}`, type: "video", url: "https://youtube.com/results?search_query=" + encodeURIComponent("advanced " + fieldName) },
-            { title: `${fieldName} Projects`, type: "course", url: "https://udemy.com/courses/search/?q=" + encodeURIComponent(fieldName) },
-            { title: `${fieldName} Best Practices`, type: "article", url: "https://google.com/search?q=" + encodeURIComponent(fieldName + " best practices") }
+            { title: `Advanced ${fieldName}`, type: "video", url: "https://www.youtube.com/results?search_query=" + encodeURIComponent("advanced " + fieldName + " course") },
+            { title: `${fieldName} Projects`, type: "course", url: "https://www.udemy.com/courses/search/?q=" + encodeURIComponent(fieldName) },
+            { title: `${fieldName} Best Practices`, type: "article", url: "https://www.google.com/search?q=" + encodeURIComponent(fieldName + " best practices guide") }
           ]
         },
         {
@@ -198,9 +198,9 @@ export const FieldInterestSelector = ({ userSkills }: FieldInterestSelectorProps
           duration: "3-4 months",
           skills: skills.slice(5),
           resources: [
-            { title: `${fieldName} Mastery`, type: "video", url: "https://youtube.com/results?search_query=" + encodeURIComponent(fieldName + " mastery") },
-            { title: `${fieldName} Certification`, type: "course", url: "https://coursera.org/professional-certificates" },
-            { title: `${fieldName} Industry Trends`, type: "article", url: "https://google.com/search?q=" + encodeURIComponent(fieldName + " trends 2024") }
+            { title: `${fieldName} Mastery`, type: "video", url: "https://www.youtube.com/results?search_query=" + encodeURIComponent(fieldName + " expert level mastery") },
+            { title: `${fieldName} Certification`, type: "course", url: "https://www.coursera.org/professional-certificates" },
+            { title: `${fieldName} Industry Trends`, type: "article", url: "https://www.google.com/search?q=" + encodeURIComponent(fieldName + " industry trends 2024") }
           ]
         }
       ]
