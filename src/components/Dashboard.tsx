@@ -206,7 +206,7 @@ export const Dashboard = () => {
 
             {/* Main Content Tabs */}
             <Tabs value={activeTab} onValueChange={setActiveTab}>
-              <TabsList className="grid w-full grid-cols-6">
+              <TabsList className="grid w-full grid-cols-5">
                 <TabsTrigger value="suggestions" className="flex items-center gap-2">
                   <Target className="h-4 w-4" />
                   Career Paths
@@ -226,10 +226,6 @@ export const Dashboard = () => {
                 <TabsTrigger value="templates" className="flex items-center gap-2">
                   <BookOpen className="h-4 w-4" />
                   Resume Builder
-                </TabsTrigger>
-                <TabsTrigger value="learn" className="flex items-center gap-2">
-                  <Star className="h-4 w-4" />
-                  Skill Development
                 </TabsTrigger>
               </TabsList>
               
@@ -256,20 +252,6 @@ export const Dashboard = () => {
                 <ResumeTemplates />
               </TabsContent>
               
-              <TabsContent value="learn" className="mt-6">
-                <Card className="shadow-medium">
-                  <CardHeader>
-                    <CardTitle>Skill Development Recommendations</CardTitle>
-                    <CardDescription>
-                      Personalized learning paths to advance your career
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center py-12">
-                    <BookOpen className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                    <p className="text-muted-foreground">Coming soon - Personalized learning recommendations</p>
-                  </CardContent>
-                </Card>
-              </TabsContent>
             </Tabs>
           </div>
         )}
