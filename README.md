@@ -34,6 +34,22 @@ Many professionals struggle with:
 
 AI Career Companion addresses these challenges through a unified platform that combines multiple career development tools into one seamless experience. The platform learns from user interactions, continuously improving its recommendations and becoming more personalized over time.
 
+## 📸 UI Snapshots
+
+Here's a glimpse of the AI Career Companion interface in action:
+
+### 🚀 Onboarding Experience
+![Onboarding Screen](public/screenshots/onboarding-screen.png)
+*Clean, user-friendly onboarding with resume upload and manual profile entry options*
+
+### 📊 Main Dashboard
+![Main Dashboard](public/screenshots/main-dashboard.png)
+*Comprehensive dashboard showing career statistics, skills portfolio, and navigation to key features*
+
+### 🎯 ATS Score Scanner
+![ATS Scanner](public/screenshots/ats-scanner.png)
+*Advanced ATS optimization tool providing actionable insights to improve resume visibility*
+
 ## 🎯 MVP Features
 
 ### ✅ Current Features
